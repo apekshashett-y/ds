@@ -1,16 +1,15 @@
-def selection_sort(arr):
+def selection(arr):
     n = len(arr)
     for i in range(n):
         min_index = i
         for j in range(i + 1, n):
-            if arr[j] < arr[min_index]:
+            if arr[min_index] > arr[j]:
                 min_index = j
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+        arr[min_index], arr[i] = arr[i], arr[min_index]  
+    return arr
 
 
-input_str = input("Enter elements separated by space: ")
-arr = list(map(int, input_str.split()))
-
+arr = [1, 6, 3, 0, 4]
 print("Original array:", arr)
-selection_sort(arr)
-print("Sorted array:  ", arr)
+sorted_arr = selection(arr)
+print("Sorted array:", sorted_arr)
