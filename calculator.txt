@@ -1,0 +1,34 @@
+public class CalculatorDemo {
+    
+    public static Integer add(Integer a, Integer b) {
+        return a + b;
+    }
+
+    public static Integer subtract(Integer a, Integer b) {
+        return a - b;
+    }
+
+    public static Integer multiply(Integer a, Integer b) {
+        return a * b;
+    }
+
+    public static Decimal divide(Decimal a, Decimal b) {
+        if (b != 0) {
+            return a / b;
+        } else {
+            return null; 
+        }
+    }
+}
+
+
+
+
+Integer num1 = 20;
+Integer num2 = 5;
+
+System.debug('Addition: ' + CalculatorDemo.add(num1, num2));
+System.debug('Subtraction: ' + CalculatorDemo.subtract(num1, num2));
+System.debug('Multiplication: ' + CalculatorDemo.multiply(num1, num2));
+System.debug('Division: ' + CalculatorDemo.divide(num1, num2));
+
